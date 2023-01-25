@@ -1,0 +1,136 @@
+//1. Write a program to calculate the sum of two numbers.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int a,b,c;
+  printf("Enter two numbers");
+  scanf("%d %d",&a,&b);
+  c=a+b;
+  printf("sum of %d and %d is %d",a,b,c);
+  getch();
+}
+________________________________________________________________________________
+
+//2. Write a program to calculate the area of a circle.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  float A,R;
+  printf("Enter the radius of circle");
+  scanf("%f",&R);
+  A=3.14*R*R;
+  printf("Area of circle is %f having the radius %f",A,R);
+  getch();
+}
+________________________________________________________________________________
+
+//3. Write a program to calculate the volume of a Cuboid.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int l,w,h,v;
+  printf("Enter the length,width and height of cuboid");
+  scanf("%d%d%d",&l,&w,&h);
+  v=l*w*h;
+  printf("volume of cuboid is %d",v);
+  getch();
+}
+________________________________________________________________________________
+
+//4. Write a program to calculate the simple interest
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  float p,r,t,si;
+    printf("Enter your principle,rate and time to calculate simple interest");
+    scanf("%f%f%f",&p,&r,&t);
+    si=(p*r*t)/100;
+    printf("simple interest=%f",si);
+  getch();
+}
+________________________________________________________________________________
+
+//5. Write a program to calculate the area of a rectangle.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int l,w,a;
+  printf("Enter the length and width of rectangle");
+  scanf("%d%d",&l,&w);
+  a=l*w;
+  printf("area of rectangle is %d",a);
+  getch();
+}
+________________________________________________________________________________
+
+//6. Write a program to calculate the average of three numbers.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int a,b,c;
+  float avg;
+  printf("Enter three numbers");
+  scanf("%d%d%d",&a,&b,&c);
+  avg=(a+b+c)/3.0;
+  printf("average of %d,%d and %d is %f",a,b,c,avg);
+  getch();
+}
+________________________________________________________________________________
+
+//8. Write a program which takes a character as input and print its ASCII code.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  char a;
+  printf("Enter a character");
+  scanf("%c",&a);
+  printf("ASCII code of %c is %d",a,a);
+  getch();
+}
+_______________________________________________________________________________
+
+//9. Write a program to calculate the profit percentage upon selling a product. Cost price and selling price are given by the user.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int sp,cp;
+  float pp;
+  printf("Enter the selling price and cost price");
+  scanf("%d%d",&sp,&cp);
+  pp=((sp-cp)*100)/cp;
+  printf("profit percent is %f",pp);
+  getch();
+}
+________________________________________________________________________________
+
+//10. Write a program to calculate the area of a triangle where base and height of the triangle are given.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int b,h;
+  float a;
+  printf("Enter the base and height of a triangle");
+  scanf("%d%d",&b,&h);
+  a=(b*h)/2.0;
+  printf("area of a triangle is %f",a);
+  getch();
+}
+___________________________________________________________________________________
