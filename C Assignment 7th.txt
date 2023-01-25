@@ -1,0 +1,177 @@
+//1. Write a program to print size of an int, a float, a char and a double type variable
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int a,x;
+   x=sizeof(a);
+   printf("size of an int type variable is %d",x);
+
+   float b;
+   x=sizeof(b);
+   printf("\n\nsize of a float type variable is %d",x);
+
+   char c;
+   x=sizeof(c);
+   printf("\n\nsize of a char type variable is %d",x);
+
+   double d;
+   x=sizeof(d);
+   printf("\n\nsize of a double type variable is %d",x);
+  getch();
+}
+_________________________________________________________________________________
+
+//2. Write a program to find last digit of a given number.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int x,y;
+   printf("Enter a number");
+   scanf("%d",&x);
+   y=x%10;
+   printf("last digit of %d is %d",x,y);
+  getch();
+}
+________________________________________________________________________________
+
+//3. Write a program to find first digit of a given three digit number.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int x,y,z;
+   printf("Enter a three digit number");
+   scanf("%d",&x);
+   z=x;
+   while(x)
+   {
+       y=x%10;
+       x=x/10;
+   }
+   printf("first digit of %d is %d",z,y);
+  getch();
+}
+________________________________________________________________________________
+
+//4. Write a program to find middle digit of a given three digit number.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int x,y,z;
+   printf("Enter a three digit number");
+   scanf("%d",&x);
+   z=x;
+       y=x%10;
+       x=x/10;
+       y=x%10;
+   printf("middle digit of %d is %d",z,y);
+  getch();
+}
+________________________________________________________________________________
+
+//5. Write a program to swap values of two int variables.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int a,b,c;
+   printf("Enter two numbers");
+   scanf("%d%d",&a,&b);
+   c=a;
+   a=b;
+   b=c;
+   printf("a=%d b=%d",a,b);
+  getch();
+}
+________________________________________________________________________________
+
+//6. Write a program to swap values of two int variables without using third variable.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int a,b;
+   printf("Enter two numbers");
+   scanf("%d%d",&a,&b);
+   a=a+b;
+   b=a-b;
+   a=a-b;
+   printf("a=%d b=%d",a,b);
+  getch();
+}
+________________________________________________________________________________
+
+//7. Write a program to make the last digit of a number stored in a variable as zero.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+  int a;
+   printf("Enter a number");
+   scanf("%d",&a);
+   a=a/10;
+   a=a*10;
+   printf("new number is %d",a);
+  getch();
+}
+_________________________________________________________________________________
+
+//8. Write a program to input a number from the user and also input a digit. Append a digit in the number and print the resulting number.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+   int a,b;
+   printf("Enter a number");
+   scanf("%d",&a);
+   printf("Enter a digit");
+   scanf("%d",&b);
+   a=a*10;
+   a=a+b;
+   printf("resulting number is %d",a);
+  getch();
+}
+________________________________________________________________________________
+
+//9. Assume price of 1 USD is INR 76.23. Write a program to take the amount in INR and convert it into USD.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+   float a,b;
+   printf("Enter the amount in INR\n");
+   scanf("%f",&a);
+   b=a/76.23;
+   printf("amount in USD is %f",b);
+  getch();
+}
+________________________________________________________________________________
+
+//10. Write a program to take a three digit number from the user and rotate its digits by one position towards the right.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+   int a,b;
+   printf("Enter a three digit number");
+   scanf("%d",&a);
+   b=a%10;
+   a=a/10;
+   a=b*100+a;
+   printf("new number is %d",a);
+  getch();
+}
+________________________________________________________________________________
