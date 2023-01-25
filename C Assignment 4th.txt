@@ -1,0 +1,95 @@
+//1. Write a C program to print Hello Students on the screen.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    printf("Hello Students");
+    getch();
+}
+_______________________________________________________________________________________
+
+//2. Write a C Program to print Hello on the first line and Students in the second line.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    printf("Hello\nStudents");
+    getch();
+}
+________________________________________________________________________________________
+
+//3. Write a C program to print “MySirG” on the screen.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    printf("\"MySirG\"");
+    getch();
+}
+________________________________________________________________________________________
+
+//4. Write a C program to print “Teacher’s Day” on the screen.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    printf("\"Teacher's Day\"");
+    getch();
+}
+________________________________________________________________________________________
+
+//5. Write a C program to print \n on the screen.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    printf("\\n");
+    getch();
+}
+________________________________________________________________________________________
+
+//6. Write a C program to print %d on the screen.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    printf("%%d");
+    getch();
+}
+________________________________________________________________________________________
+
+//7. Write a C program containing declaration of three variables (of type int, char and
+//float), also assign some values to them and print values of all three variables using
+//single printf().
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int a=5;
+    char m=97;
+    float f=4.5;
+    printf("a=%d m=%c f=%f",a,m,f);
+    getch();
+}
+________________________________________________________________________________________
+
+//9. Write a C program to print character stored in a char variable, also print its ASCII code.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    char a='A';
+    printf("%c",a);
+    printf("\nASCII code of %c is %d",a,a);
+    getch();
+}
+________________________________________________________________________________________
+
