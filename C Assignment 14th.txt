@@ -1,0 +1,317 @@
+//1. Write a function to calculate the area of a circle. (TSRS)
+
+#include<stdio.h>
+float area(float);
+int main()
+{
+    float a,r,s;
+    printf("Enter the radius of circle");
+    scanf("%f",&r);
+    s=area(r);
+    printf("Area of circle is %f",s);
+    return 0;
+}
+float area(float R)
+{
+    float ar;
+    ar=3.14*R*R;
+    return (ar);
+}
+________________________________________________________________________________
+
+//2. Write a function to calculate simple interest. (TSRS)
+
+#include<stdio.h>
+float SI(float,float,float);
+int main()
+{
+    float p,r,t,s;
+    printf("Enter your principle,rate and time to calculate simple interest");
+    scanf("%f%f%f",&p,&r,&t);
+    s=SI(p,r,t);
+    printf("simple interest is %f",s);
+    return 0;
+}
+float SI(float a,float b,float c)
+{
+    float si;
+    si=(a*b*c)/100.0;
+    return (si);
+}
+________________________________________________________________________________
+
+//3. Write a function to check whether a given number is even or odd. Return 1 if the number is even, otherwise return 0. (TSRS)
+
+#include<stdio.h>
+int is_even(int);
+int main()
+{
+    int a,s;
+    printf("Enter a number");
+    scanf("%d",&a);
+    s=is_even(a);
+    printf("%d",s);
+    return 0;
+}
+int is_even(int x)
+{
+    if(x%2==0)
+       return 1;
+    else
+       return 0;
+}
+________________________________________________________________________________
+
+//4. Write a function to print first N natural numbers.(TSRN)
+
+#include<stdio.h>
+void N_natural(int);
+int main()
+{
+    int n;
+    printf("Enter the value of n ");
+    scanf("%d",&n);
+    N_natural(n);
+    return 0;
+}
+void  N_natural(int m)
+{
+    int i;
+    for(i=1;i<=m;i++)
+        printf("%d ",i);
+}
+________________________________________________________________________________
+
+//5. Write a function to print first N odd natural numbers. (TSRN)
+
+#include<stdio.h>
+void N_odd(int);
+int main()
+{
+    int n;
+    printf("Enter the value of n ");
+    scanf("%d",&n);
+    N_odd(n);
+    return 0;
+}
+void N_odd(int m)
+{
+    int i;
+    for(i=1;i<=m;i++)
+        printf("%d ",2*i-1);
+}
+________________________________________________________________________________
+
+//6. Write a function to calculate the factorial of a number.(TSRS)
+
+#include<stdio.h>
+int factorial(int);
+int main()
+{
+    int n,s;
+    printf("Enter a number ");
+    scanf("%d",&n);
+    s=factorial(n);
+    printf("factorial of %d is %d",n,s);
+    return 0;
+}
+int factorial(int m)
+{
+    int i,fact=1;
+    for(i=m;i>=1;i--)
+        fact=fact*i;
+        return (fact);
+}
+________________________________________________________________________________
+
+//7. Write a function to calculate the number of combinations one can make from n items and r selected at a time. (TSRS)
+
+#include<stdio.h>
+int combi(int,int);
+int main()
+{
+    int n,r,s;
+    printf("Enter values of n and r ");
+    scanf("%d%d",&n,&r);
+    s=combi(n,r);
+    printf("combination is %d",s);
+    return 0;
+}
+int combi(int a,int b)
+{
+    int i,j,k,factN=1,factR=1,fact=1,comb;
+    for(i=a;i>=1;i--)
+        factN=factN*i;
+    for(j=b;j>=1;j--)
+        factR=factR*j;
+    for(k=a-b;k>=1;k--)
+        fact=fact*k;
+    comb=factN/(factR*fact);
+        return (comb);
+}
+________________________________________________________________________________
+
+//8. Write a function to calculate the number of arrangements one can make from n items and r selected at a time. (TSRS)
+
+#include<stdio.h>
+int perm(int,int);
+int main()
+{
+    int n,r,s;
+    printf("Enter values of n and r ");
+    scanf("%d%d",&n,&r);
+    s=perm(n,r);
+    printf("permutation is %d",s);
+    return 0;
+}
+int perm(int a,int b)
+{
+    int i,j,factN=1,fact=1,per;
+    for(i=a;i>=1;i--)
+        factN=factN*i;
+    for(j=a-b;j>=1;j--)
+        fact=fact*j;
+    per=factN/fact;
+        return (per);
+}
+________________________________________________________________________________
+
+//9. Write a function to calculate LCM of two numbers. (TSRS)
+
+#include<stdio.h>
+int LCM(int,int);
+int main()
+{
+    int a,b,s;
+    printf("Enter two numbers ");
+    scanf("%d%d",&a,&b);
+    s=LCM(a,b);
+    printf("LCM of %d and %d is %d",a,b,s);
+    return 0;
+}
+int LCM(int x,int y)
+{
+    int i;
+    for(i=x>y?x:y;i<=x*y;i++)
+    {
+        if(i%x==0 && i%y==0)
+            break;
+    }
+        return (i);
+}
+________________________________________________________________________________
+
+//10. Write a function to calculate HCF of two numbers. (TSRS)
+
+#include<stdio.h>
+int HCF(int,int);
+int main()
+{
+    int a,b,s;
+    printf("Enter two numbers ");
+    scanf("%d%d",&a,&b);
+    s=HCF(a,b);
+    printf("HCF of %d and %d is %d",a,b,s);
+    return 0;
+}
+int HCF(int x,int y)
+{
+    int i;
+    for(i=x<y?x:y;i>=1;i--)
+    {
+        if(x%i==0 && y%i==0)
+            break;
+    }
+        return (i);
+}
+________________________________________________________________________________
+
+//11. Write a function to check whether a given number is Prime or not.Return 1 if prime otherwise return 0. (TSRS)
+
+#include<stdio.h>
+int prime(int);
+int main()
+{
+    int a,s;
+    printf("Enter a number ");
+    scanf("%d",&a);
+    s=prime(a);
+    printf("%d",s);
+    return 0;
+}
+int prime(int x)
+{
+    int i;
+    for(i=2;i<=x;i++)
+    {
+        if(x%i==0)
+            break;
+    }
+    if(i==x)
+        return 1;
+    else
+        return 0;
+}
+________________________________________________________________________________
+
+//12. Write a function to find the next prime number of a given number. (TSRS)
+
+#include<stdio.h>
+int Nextprime(int);
+int main()
+{
+    int a,s;
+    printf("Enter a number ");
+    scanf("%d",&a);
+    s=Nextprime(a);
+    printf("next prime of %d is %d",a,s);
+    return 0;
+}
+int Nextprime(int x)
+{
+    int i,j;
+    for(i=x+1;i;i++)
+    {
+        for(j=2;j<=i;j++)
+        {
+           if(i%j==0)
+              break;
+        }
+        if(j==i)
+           break;
+    }
+        return j;
+}
+________________________________________________________________________________
+
+//13. Write a function to print first N prime numbers (TSRN)
+
+#include<stdio.h>
+void N_prime(int);
+int main()
+{
+    int n;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    N_prime(n);
+    return 0;
+}
+void N_prime(int m)
+{
+    int i,x=2;
+    while(m)
+    {
+        for(i=2;i<=x;i++)
+        {
+            if(x%i==0)
+                break;
+        }
+        if(i==x)
+          {
+              printf("%d ",i);
+              m--;
+          }
+        x++;
+    }
+}
+________________________________________________________________________________
