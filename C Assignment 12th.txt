@@ -1,0 +1,238 @@
+//1. Write a program to print first N terms of a Fibonacci series.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int N,a=-1,b=1,c=0,i;
+    printf("Enter a number");
+    scanf("%d",&N);
+    for(i=1;i<=N;i++)
+    {
+        c=a+b;
+        printf("%d ",c);
+        a=b;
+        b=c;
+    }
+  getch();
+}
+________________________________________________________________________________
+
+//2. Write a program to calculate HCF of two numbers.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int a,b,i,hcf;
+    printf("Enter two numbers");
+    scanf("%d%d",&a,&b);
+    for(i=a<b?a:b;i>=1;i--)
+    {
+      if(a%i==0 && b%i==0)
+            break;
+    }
+    printf("HCF is %d",i);
+  getch();
+}
+________________________________________________________________________________
+
+//3. Write a program to display following patterns.
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=4;i++)
+    {
+        for(j=1;j<=4;j++)
+        {
+            if(j>=5-i && j<=4)
+                printf("*");
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+  getch();
+}
+________________________________________________________________________________
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=4;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(j>=5-i && j<=3+i)
+                printf("*");
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+  getch();
+}
+________________________________________________________________________________
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=4;i++)
+    {
+        k=1;
+        for(j=1;j<=7;j++)
+        {
+            if(j>=5-i && j<=3+i)
+            {
+              if(j>=1 && j<=3)
+                 printf("%d",k++);
+              else
+                 printf("%d",k--);
+            }
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+  getch();
+}
+________________________________________________________________________________
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=4;i++)
+    {
+        k='A';
+        for(j=1;j<=4;j++)
+        {
+            if(j>=1 && j<=5-i)
+               printf("%c",k++);
+            else
+               printf(" ");
+        }
+        printf("\n");
+    }
+  getch();
+}
+________________________________________________________________________________
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=4;i++)
+    {
+        k='A';
+        for(j=1;j<=7;j++)
+        {
+            if(j>=i && j<=8-i)
+               {
+                  if(j>=1 && j<=3)
+                    printf("%c",k++);
+                  else
+                    printf("%c",k--);
+               }
+            else
+               printf(" ");
+        }
+        printf("\n");
+    }
+  getch();
+}
+________________________________________________________________________________
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=4;i++)
+    {
+        for(j=1;j<=7;j++)
+        {
+            if(j>=i && j<=8-i)
+               {
+                  if(j==i || j==8-i)
+                    printf("1");
+                  else
+                    printf("0");
+               }
+            else
+               printf(" ");
+        }
+        printf("\n");
+    }
+  getch();
+}
+________________________________________________________________________________
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=3;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            if(j>=4-i && j<=2+i)
+               printf("*");
+            else
+               printf(" ");
+        }
+        printf("\n");
+    }
+    for(i=1;i<=2;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            if(j>=i+1 && j<=5-i)
+               printf("*");
+            else
+               printf(" ");
+        }
+        printf("\n");
+    }
+  getch();
+}
+________________________________________________________________________________
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=5;i++)
+    {
+        k=5;
+        if(i>=2 && i<=5)
+            --k;
+        if(i>=3 && i<=5)
+            --k;
+        if(i>=4 && i<=5)
+            --k;
+         if(i>=5 && i<=5)
+            --k;
+       for(j=1;j<=5;j++)
+       {
+           if(j<=6-i && j>=1)
+              printf("%d",k--);
+           else
+              printf(" ");
+       }
+       printf("\n");
+    }
+    getch();
+}
+________________________________________________________________________________
