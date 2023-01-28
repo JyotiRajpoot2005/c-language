@@ -1,0 +1,318 @@
+//1. Write a recursive function to print first N natural numbers.
+
+#include<stdio.h>
+void N_natural(int);
+int main()
+{
+    int n;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    N_natural(n);
+    return 0;
+}
+void N_natural(int m)
+{
+  if(m>0)
+  {
+      N_natural(m-1);
+      printf("%d ",m);
+  }
+}
+________________________________________________________________________________
+
+//2. Write a recursive function to print first N natural numbers in reverse order.
+
+#include<stdio.h>
+void N_natural(int);
+int main()
+{
+    int n;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    N_natural(n);
+    return 0;
+}
+void N_natural(int m)
+{
+  if(m>0)
+  {
+      printf("%d ",m);
+      N_natural(m-1);
+  }
+}
+________________________________________________________________________________
+
+//3. Write a recursive function to print first N odd natural numbers.
+
+#include<stdio.h>
+void N_odd(int);
+int main()
+{
+    int n;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    N_odd(n);
+    return 0;
+}
+void N_odd(int m)
+{
+  if(m>0)
+  {
+      N_odd(m-1);
+      printf("%d ",2*m-1);
+  }
+}
+________________________________________________________________________________
+
+//4. Write a recursive function to print first N odd natural numbers in reverse order.
+
+#include<stdio.h>
+void N_odd(int);
+int main()
+{
+    int n;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    N_odd(n);
+    return 0;
+}
+void N_odd(int m)
+{
+  if(m>0)
+  {
+      printf("%d ",2*m-1);
+      N_odd(m-1);
+  }
+}
+________________________________________________________________________________
+
+//5. Write a recursive function to print first N even natural numbers.
+
+#include<stdio.h>
+void N_even(int);
+int main()
+{
+    int n;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    N_even(n);
+    return 0;
+}
+void N_even(int m)
+{
+  if(m>0)
+  {
+      N_even(m-1);
+      printf("%d ",2*m);
+
+  }
+}
+_______________________________________________________________________________
+
+//6. Write a recursive function to print first N even natural numbers in reverse order.
+
+#include<stdio.h>
+void N_even(int);
+int main()
+{
+    int n;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    N_even(n);
+    return 0;
+}
+void N_even(int m)
+{
+  if(m>0)
+  {
+      printf("%d ",2*m);
+      N_even(m-1);
+  }
+}
+________________________________________________________________________________
+
+//7. Write a recursive function to print squares of first N natural numbers.
+
+#include<stdio.h>
+void print_square(int);
+int main()
+{
+    int n;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    print_square(n);
+    return 0;
+}
+void print_square(int m)
+{
+  if(m>0)
+  {
+      print_square(m-1);
+      printf("%d ",m*m);
+
+  }
+}
+________________________________________________________________________________
+
+//8. Write a recursive function to calculate sum of first N natural numbers.
+
+#include<stdio.h>
+int N_sum(int);
+int main()
+{
+    int n,k;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    k=N_sum(n);
+    printf("sum of first %d natural numbers is %d",n,k);
+    return 0;
+}
+int N_sum(int m)
+{
+   int s;
+   if(m==1)
+      return 1;
+    s=m+N_sum(m-1);
+    return s;
+}
+________________________________________________________________________________
+
+//9. Write a recursive function to calculate sum of first N odd natural numbers.
+
+#include<stdio.h>
+int odd_sum(int);
+int main()
+{
+    int n,k;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    k=odd_sum(n);
+    printf("sum of first %d odd natural numbers is %d",n,k);
+    return 0;
+}
+int odd_sum(int m)
+{
+   int s;
+   if(m==1)
+      return 1;
+    s=(2*m-1)+odd_sum(m-1);
+    return s;
+}
+________________________________________________________________________________
+
+//10. Write a recursive function to calculate sum of first N even natural numbers.
+
+#include<stdio.h>
+int even_sum(int);
+int main()
+{
+    int n,k;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    k=even_sum(n);
+    printf("sum of first %d even natural numbers is %d",n,k);
+    return 0;
+}
+int even_sum(int m)
+{
+   int s;
+   if(m==1)
+      return 2;
+    s=(2*m)+even_sum(m-1);
+    return s;
+}
+________________________________________________________________________________
+
+//11. Write a recursive function to calculate sum of squares of first n natural numbers.
+
+#include<stdio.h>
+int square_sum(int);
+int main()
+{
+    int n,k;
+    printf("Enter value of n ");
+    scanf("%d",&n);
+    k=square_sum(n);
+    printf("sum of squares of first %d even natural numbers is %d",n,k);
+    return 0;
+}
+int square_sum(int m)
+{
+   int s;
+   if(m==1)
+      return 1;
+    s=(m*m)+square_sum(m-1);
+    return s;
+}
+________________________________________________________________________________
+
+//12. Write a recursive function to calculate sum of digits of a given number.
+
+#include<stdio.h>
+int digit_sum(int);
+int main()
+{
+    int n,k;
+    printf("Enter a number");
+    scanf("%d",&n);
+    k=digit_sum(n);
+    printf("sum of digits of %d number is %d",n,k);
+    return 0;
+}
+int digit_sum(int m)
+{
+   int s;
+   if(m==0)
+      return 0;
+    s=(m%10)+digit_sum(m/10);
+    return s;
+}
+________________________________________________________________________________
+
+//13. Write a recursive function to calculate factorial of a given number.
+
+#include<stdio.h>
+int fact(int);
+int main()
+{
+    int n,k;
+    printf("Enter a number");
+    scanf("%d",&n);
+    k=fact(n);
+    printf("factorial of %d is %d",n,k);
+    return 0;
+}
+int fact(int m)
+{
+   int s;
+   if(m==0)
+      return 1;
+    s=m*fact(m-1);
+    return s;
+}
+________________________________________________________________________________
+
+//14. Write a recursive function to find the nth term of Fibonacci series.
+
+#include<stdio.h>
+int fibo(int);
+int main()
+{
+    int n,k;
+    printf("Enter the value of n ");
+    scanf("%d",&n);
+    k=fibo(n);
+    printf("%d term of fibonacci series is %d",n,k);
+    return 0;
+}
+int fibo(int m)
+{
+   int s;
+   if(m==1)
+      return 0;
+      if(m==2)
+        return 1;
+      else
+        return fibo(m-1)+fibo(m-2);
+}
+________________________________________________________________________________
